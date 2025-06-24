@@ -24,6 +24,9 @@ body {
     color: var(--negro);
     font-family: "MS Sans Serif", sans-serif;
     font-size: .75rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -38,6 +41,7 @@ ul { list-style: none; }
 main {
     margin: 1rem;
     color: var(--blanco);
+    flex: 1;
 
     & section {
         display: grid;
@@ -68,9 +72,6 @@ main {
 /* FOOTER */
 footer {
     background-color: var(--gris-claro);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 
     display: flex;
     justify-content: space-between;
