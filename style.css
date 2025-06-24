@@ -1,0 +1,122 @@
+:root {
+    --turquesa: #008080;
+    --azul: #010081;
+    --magenta: #FF0081;
+    --blanco: #FDFFFF;
+    --gris-claro: #C3C3C3;
+    --gris-oscuro: #818181;
+    --negro: #000000;
+}
+
+@font-face {
+  font-family: "MS Sans Serif";
+  src: url("assets/microsoftsansserif.ttf") format("truetype"); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--turquesa);
+    color: var(--negro);
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: .75rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+ul { list-style: none; }
+/* ---------------------------------------------- */
+
+/* MAIN */
+main {
+    margin: 1rem;
+    color: var(--blanco);
+
+    & section {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(7, 100px);
+        grid-template-columns: repeat(auto-fill, 75px);
+        gap: 1rem;
+        justify-content: space-between;
+
+        & article {
+            & a {
+                color: var(--blanco);
+                display: flex;
+                flex-direction: column;
+                gap: .3rem;
+                align-items: center;
+                text-align: center;
+
+                & img {
+                    width: 50px;
+                }
+            }
+        }
+    }
+}
+/* ---------------------------------------------- */
+
+/* FOOTER */
+footer {
+    background-color: var(--gris-claro);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem .2rem .3rem;
+
+    border-top: 2px outset var(--blanco);
+
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        & img { width: 1.5rem; }
+
+        & .inicio, & .reloj {
+            display: flex;
+            align-items: center;
+        }
+
+        & .inicio {
+            gap: .2rem;
+            padding: .1rem .3rem;
+            font-size: 14px;
+            font-weight: 600;
+            border: 2px outset var(--blanco);
+            box-shadow: 2px 2px var(--negro);
+        }
+
+        & .icons {
+            border-left: 2px outset var(--blanco);
+            border-right: 2px outset var(--blanco);
+            padding: 0 .5rem;
+            align-self: end;
+        }
+    }
+
+    & .derecha {
+        margin-right: .1rem;
+
+        & ul {
+            gap: .7rem;
+            border: 2px inset var(--blanco);
+            padding: .2rem .3rem;
+
+            & img { width: 1.1rem; }
+        }
+    }
+}
